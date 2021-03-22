@@ -119,6 +119,7 @@ function Main() {
 
         <ImgMap />
       </div>
+      <Form></Form>
     </div>
   );
 }
@@ -333,4 +334,85 @@ function Detaliu(props){
   {
     return <h2>Page Not Found!</h2>
   }
+}
+
+function Form()
+{
+  let uRef = React.createRef();
+  let pRef = React.createRef();
+  let eRef = React.createRef();
+  let iRef = React.createRef();
+  let dRef = React.createRef();
+  let tRef = React.createRef();
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    if(uRef.current.value === undefined)
+    {
+      alert('Please add a username');
+    }
+
+    if(pRef.current.value === undefined)
+    {
+      alert('Don\' forget the password');
+    }
+
+    if(eRef.current.value === undefined)
+    {
+      alert('You forgot the email :(');
+    }
+
+    if(iRef.current.value === undefined)
+    {
+      alert('Please upload an image');
+    }
+
+    if(dRef.current.value === undefined)
+    {
+      alert('Please add a description to the image');
+    }
+
+    if(tRef.current.value === undefined)
+    {
+      alert('Please add some Tags');
+    }
+  }
+  return (
+    <div  className=" border p-2 t-left ml-4 pl-5 d-inline bg-light">
+      <h3 className="p-3">Input your own Photo of the City!</h3>
+      <form onSubmit={handleSubmit}>
+        <div className="p-1">
+          <label for="uName">Username</label>
+          <input type="text" name="uName" ref={uRef} required />
+        </div>
+        <div className="p-1">
+          <label for="pass">Password</label>
+          <input type="password" name="pass" ref={pRef} required />
+        </div>
+
+        <div className="p-1">
+          <label for="email">Email</label>
+          <input type="email" name="email" ref={eRef} required />
+        </div>
+
+        <div className="p-1">
+          <label for="img">Image</label>
+          <input type="file" name="img" ref={iRef} required />
+        </div>
+
+        <div className="p-1">
+          <label for="dtls">Image Details</label>
+          <input type="text" name="dtls" ref={dRef} required />
+        </div>
+
+        <div className="p-1">
+          <label for="tags">Tags</label>
+          <input type="text" name="tags" ref={tRef} required />
+        </div>
+
+        <input type="submit" value="Send Image!" />
+      </form>
+    </div>
+  );
 }

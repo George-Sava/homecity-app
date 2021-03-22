@@ -14,13 +14,18 @@
 
   color: white;
 
-  background-color: rgb(65, 65, 70);
+  background-color: rgb(53, 53, 54);
 }
 
 /* Util Tools */
 .bg-dark
 {
-  background-color: rgb(65, 65, 70);
+  background-color: rgb(53, 53, 54);
+}
+
+.bg-light
+{
+  background-color: rgb(93, 93, 95);
 }
 
 .container
@@ -228,6 +233,31 @@
 .mt-5
 {
   margin-top: 30px;
+}
+
+.ml-1
+{
+  margin-left: 10px;
+}
+
+.ml-2
+{
+  margin-left: 15px;
+}
+
+.ml-3
+{
+  margin-left: 20px;
+}
+
+.ml-4
+{
+  margin-left: 25px;
+}
+
+.ml-5
+{
+  margin-left: 30px;
 }
 
 .p-1
